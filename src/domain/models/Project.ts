@@ -1,3 +1,4 @@
+import { ProjectStatus } from '../enums/ProjectStatus';
 import { Framework, FrameworkData } from './Framework';
 import { TechLanguage, TechLanguageData } from './TechLanguage';
 
@@ -14,7 +15,8 @@ export interface Project {
   presentation: string;
   description: string;
   date: string;
-  downloadLink: string | undefined;
+  status: ProjectStatus;
+  downloadLink?: string;
   languages: TechLanguage[];
   frameworks: Framework[];
 }
@@ -35,6 +37,7 @@ export class ProjectData {
     presentation: 'projects.cashflow.presentation',
     description: 'projects.cashflow.description',
     date: 'projects.cashflow.date',
+    status: ProjectStatus.PRIVATE,
     downloadLink:
       'https://apps.apple.com/fr/app/cashflow-suivi-des-d%C3%A9penses/id6450913423?platform=iphone',
     languages: [TechLanguageData.swift],
@@ -63,6 +66,7 @@ export class ProjectData {
     presentation: 'projects.cyclo.presentation',
     description: 'projects.cyclo.description',
     date: 'projects.cyclo.date',
+    status: ProjectStatus.OPENSOURCE,
     downloadLink: 'https://github.com/theosementa/Cyclo',
     languages: [TechLanguageData.swift],
     frameworks: [
@@ -86,6 +90,7 @@ export class ProjectData {
     presentation: 'projects.ecoTime.presentation',
     description: 'projects.ecoTime.description',
     date: 'projects.ecoTime.date',
+    status: ProjectStatus.OPENSOURCE,
     downloadLink: 'https://github.com/theosementa/EcoTime',
     languages: [TechLanguageData.swift],
     frameworks: [
@@ -107,6 +112,7 @@ export class ProjectData {
     presentation: 'projects.split.presentation',
     description: 'projects.split.description',
     date: 'projects.split.date',
+    status: ProjectStatus.PRIVATE,
     downloadLink:
       'https://apps.apple.com/fr/app/split-partager-les-d%C3%A9penses/id6504157641',
     languages: [TechLanguageData.swift],
@@ -132,6 +138,7 @@ export class ProjectData {
     presentation: 'projects.tyradex.presentation',
     description: 'projects.tyradex.description',
     date: 'projects.tyradex.date',
+    status: ProjectStatus.OPENSOURCE,
     downloadLink: 'https://github.com/theosementa/Tyradex',
     languages: [TechLanguageData.swift],
     frameworks: [FrameworkData.swiftUI, FrameworkData.tyradexkit],
@@ -148,6 +155,7 @@ export class ProjectData {
     presentation: 'projects.tyradexKit.presentation',
     description: 'projects.tyradexKit.description',
     date: 'projects.tyradexKit.date',
+    status: ProjectStatus.OPENSOURCE,
     downloadLink: 'https://github.com/theosementa/TyradexKit',
     languages: [TechLanguageData.swift],
     frameworks: [],
@@ -164,6 +172,7 @@ export class ProjectData {
     presentation: 'projects.portfolio.presentation',
     description: 'projects.portfolio.description',
     date: 'projects.portfolio.date',
+    status: ProjectStatus.OPENSOURCE,
     downloadLink: 'https://github.com/theosementa/portfolio',
     languages: [
       TechLanguageData.typescript,
@@ -177,8 +186,8 @@ export class ProjectData {
   static projects: Project[] = [
     this.cashflow,
     this.cyclo,
-    this.ecoTime,
     this.split,
+    this.ecoTime,
     this.tyradex,
     this.tyradexKit,
     this.portfolio,
