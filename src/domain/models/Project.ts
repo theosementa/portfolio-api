@@ -60,7 +60,11 @@ export class ProjectData {
     images: {
       logo: '/assets/images/projects/cyclo/CycloLogo.png',
       banner: '/assets/images/projects/cyclo/CycloBanner.jpg',
-      images: [],
+      images: [
+        '/assets/images/project/cyclo/mockups/mockup1.png',
+        '/assets/images/project/cyclo/mockups/mockup2.png',
+        '/assets/images/project/cyclo/mockups/mockup3.png',
+      ],
     },
     subtitle: 'projects.cyclo.subtitle',
     presentation: 'projects.cyclo.presentation',
