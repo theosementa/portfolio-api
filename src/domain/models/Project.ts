@@ -61,9 +61,9 @@ export class ProjectData {
       logo: '/assets/images/projects/cyclo/CycloLogo.png',
       banner: '/assets/images/projects/cyclo/CycloBanner.jpg',
       images: [
-        '/assets/images/project/cyclo/mockups/mockup1.png',
-        '/assets/images/project/cyclo/mockups/mockup2.png',
-        '/assets/images/project/cyclo/mockups/mockup3.png',
+        '/assets/images/projects/cyclo/mockups/mockup1.png',
+        '/assets/images/projects/cyclo/mockups/mockup2.png',
+        '/assets/images/projects/cyclo/mockups/mockup3.png',
       ],
     },
     subtitle: 'projects.cyclo.subtitle',
@@ -88,7 +88,11 @@ export class ProjectData {
     images: {
       logo: '/assets/images/projects/ecotime/EcoTimeLogo.png',
       banner: '/assets/images/projects/ecotime/EcoTimeBanner.jpg',
-      images: [],
+      images: [
+        '/assets/images/projects/ecotime/mockups/mockup1.png',
+        '/assets/images/projects/ecotime/mockups/mockup2.png',
+        '/assets/images/projects/ecotime/mockups/mockup3.png',
+      ],
     },
     subtitle: 'projects.ecoTime.subtitle',
     presentation: 'projects.ecoTime.presentation',
